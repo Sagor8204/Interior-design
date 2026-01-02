@@ -1,1 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @import "tailwindcss";
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "remixicon/fonts/remixicon.css";
+
+:root {
+  --prim: #caa05c;
+  --text: #1c1c1d;
+  --body: #f6f6f6;
+  --white: #fff;
+  --black: #000;
+
+  --CalSans: "Cal Sans", sans-serif;
+  --GolsText: "Golos Text", sans-serif;
+  --Audiowide: "Audiowide", sans-serif;
+
+  --tranistion-regular: 0.3s;
+  --tranistion-slow: 0.6s;
+}
+
+body {
+  background-color: var(--body);
+}
+
+.CalSans {
+  font-family: var(--CalSans);
+}
+
+.GolsText {
+  font-family: var(--GolsText);
+}
+
+.Audiowide {
+  font-family: var(--Audiowide);
+}
+
+/* Navbar */
+menu-link a {
+  font-family: var(--GolsText);
+}
+
+/* Hero header */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.hero-span {
+  position: relative;
+}
+
+.hero-span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--prim);
+}
+
+.hero-bg-elm {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 400px;
+  transform: translate(-50, -50%);
+  height: 400px;
+  background-color: var(--white);
+  border-radius: 100%;
+  box-shadow: 0 0 40px rgba(131, 131, 131, 0.1);
+}
+
+.hero-bg-elm2 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 700px;
+  transform: translate(-50%, -50%);
+  height: 700px;
+  background-color: rgba(195, 195, 195, 0.3);
+  border-radius: 100%;
+  box-shadow: 0 0 40px rgba(131, 131, 131, 0.1);
+}
+
+.hero-content-img i {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: rgba(225, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: var(--white)
+}
+
+.partner-swiper {
+    padding: 20px !important;
+}
+
+.partner-img {
+    transition: var(--tranistion-regular);
+    cursor: pointer;
+}
+
+.partner-img:hover {
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    background-image: url(../images/About-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.title {
+    position: relative;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(131, 131, 131, 0.3);
+}
+
+.title:before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 10%;
+    width: 1px;
+    height: 250px;
+    background-color: rgba(131, 131, 131, 0.3);
+}
+
+.title-span {
+    position: relative;
+}
+
+.title-span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: var(--prim);
+}
+
+/* Paralex section */
+
+.Paralex-wrap {
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center center;
+ position: relative;
+ z-index: 1;
+ will-change: transform, opacity;
+}
+
+.Paralex-wrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+.Paralex-content {
+    height: 80vh;
+}
+
+/* Service Section */
+.service:after {
+    content: "Olivion";
+    position: absolute;
+    line-height: 9rem;
+    bottom: 0;
+    left: 10%;
+    font-size: 12rem;
+    font-weight: 800;
+    font-family: var(--Audiowide);
+    opacity: 0.1;
+    color: gray;
+}
+
+.service:before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/service-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    bottom: -13%;
+    right: 10%;
+    height: 450px;
+    width: 800px;
+}
+
+.service-img {
+    transform: scale(0);
+    opacity: 0;
+    transition: var(--tranistion-slow);
+}
+
+.service-card:hover .service-img {
+    transform: scale(0.9);
+    opacity: 1;
+}
+
+.service-card:hover i {
+    transform: rotate(45deg);
+    background-color: var(--prim);
+    color: var(--white);
+    padding: 6px 10px;
+    border-radius: 50%;
+}
+
+/* Expertise */
+.expertise-slider {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.expertise-slider img {
+    animation: Anim-scale 4s forwards;
+    border-radius: 20px;
+}
+
+@keyframes Anim-scale {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        height: 100%;
+        margin-top: 8%;
+    }
+    .hero-content-img {
+        top: 70% !important
+    }
+
+    .about {
+        background-position: top center;
+    }
+
+    .service:after {
+        font-size: 8rem;
+    }
+
+    .service:before {
+        height: 350px;
+        bottom: -10%;
+        width: 500px;
+    }
+
+    .service-img {
+        transform: scale(1);
+        opacity: 1;
+        transition: var(--tranistion-slow);
+    }
+}
+
+@media (max-width: 575px) {
+    .hero {
+        height: 100%;
+        margin-top: 8%;
+    }
+    .hero-content-img {
+        top: 50% !important
+    }
+
+    .service:before {
+        display: none;
+    }
+}
