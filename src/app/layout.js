@@ -1,6 +1,7 @@
 import { Audiowide, Cal_Sans, Golos_Text } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const audiowide = Audiowide({
   weight: "400",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
