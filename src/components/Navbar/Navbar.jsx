@@ -8,25 +8,24 @@ const navlinks = [
   { label: "Services", href: "/services" },
   {
     label: "Projects",
-    href: "/UI-Components/Projects",
+    href: "#",
     dropdown: [
-      { label: "Projects", href: "/UI-Components/Projects" },
-      { label: "Project Details", href: "//UI-Components/Projects/1" },
+      { label: "Projects", href: "/projects" },
+      { label: "Project Details", href: "//projects/1" },
     ],
   },
   {
-    label: "Blogs",
-    href: "/UI-Components/Blogs",
+    label: "Blogs", href: "#",
     dropdown: [
-      { label: "Blogs", href: "//UI-Components/Blogs" },
-      { label: "Blog Details", href: "//UI-Components/Blogs/1" },
+      { label: "Blogs", href: "/blogs" },
+      { label: "Blog Details", href: "/blogs/1" },
     ],
   },
   {
     label: "Pages",
     href: "#",
     dropdown: [
-      { label: "About", href: "//UI-Components/Pages/About" },
+      { label: "About", href: "/about" },
       { label: "Team", href: "//UI-Components/Pages/Teams" },
       { label: "Gallery", href: "//UI-Components/Pages/Gallery" },
       { label: "Contact", href: "//UI-Components/Pages/Contact" },
