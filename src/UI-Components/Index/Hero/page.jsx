@@ -31,7 +31,7 @@ export default function Hero() {
                 <span className="hero-span border border-gray-400 GolosText font-bold px-5 py-2 rounded-full">
                   Trusted Design Partner
                 </span>
-                <h1 className="text-6xl lg:text8xl ColSans my-5">
+                <h1 className="text-6xl lg:text-8xl CalSans my-5">
                   Find Your Inspired{" "}
                   <span className="text-(--prim)">Interior Design</span>
                 </h1>
@@ -40,7 +40,7 @@ export default function Hero() {
                   are always dedicated to bringing your vision to life.
                 </p>
                 <button className="mt-9 border border-gray-500/50 px-5 py-3 rounded-full GolosText font-semibold hover:bg-(--prim) hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer group">
-                  <Link href="/UI-Components/Pages/Services">
+                  <Link href="/services">
                     Get Our Services <i className="bi bi-arrow-right ps-1"></i>
                   </Link>
                 </button>
@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="px-[80%] lg:px-[12%] pb-10">
+      <div className="px-[8%] lg:px-[12%] pb-10">
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
@@ -77,7 +77,7 @@ export default function Hero() {
           modules={[Autoplay]}
           breakpoints={{
             1200: { slidesPerView: 5 },
-            991: { slidesPerView: 5 },
+            991: { slidesPerView: 4 },
             575: { slidesPerView: 2 },
             0: { slidesPerView: 2 },
           }}

@@ -1,8 +1,6 @@
 "use client";
 
 import AboutImg1 from "@/images/About-1.jpg"
-import AboutImg2 from "@/images/About-2.jpg"
-import AboutImg3 from "@/images/About-3.jpg"
 import Image from "next/image";
 import CountUp from "react-countup";
 
@@ -81,14 +79,14 @@ export default function About() {
         {statsData.map((item, index) => (
           <div key={index} className="about-card">
             <h2 className="text-5xl tracking-wider CalSans font-bold mb-6">
-              {/* <CountUp
+              <CountUp
                 start={0}
                 end={item.value}
                 duration={2.5}
                 enableScrollSpy
                 scrollSpyOnce
                 redraw={false}
-              /> */}
+              />
               {item.suffix}
             </h2>
             <div className="about-content py-6 border-t border-gray-400">

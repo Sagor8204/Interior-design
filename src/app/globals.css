@@ -38,6 +38,7 @@ body {
 
 /* Navbar */
 menu-link a {
+  font-weight: 500;
   font-family: var(--GolsText);
 }
 
@@ -87,7 +88,7 @@ menu-link a {
   top: 0;
   left: 30%;
   width: 400px;
-  transform: translate(-50, -50%);
+  transform: translate(-50%, -50%);
   height: 400px;
   background-color: var(--white);
   border-radius: 100%;
@@ -496,6 +497,91 @@ menu-link a {
     top: 190px;
 }
 
+/* Team page */
+.team-card {
+    position: relative;
+}
+
+.team-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000000d4, #00000000 50%);
+}
+
+.team-wrapper .team-card:nth-child(2),
+.team-wrapper .team-card:nth-child(5) {
+    transform: translateY(60px);
+}
+
+.team-content {
+    position: absolute;
+    bottom: -7%;
+    left: 5%;
+    z-index: 10;
+    transition: var(--tranistion-slow);
+}
+
+.team-card:hover .team-content {
+    bottom: 5%;
+}
+
+.teams-bg {
+    position: relative;
+}
+
+.teams-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/Team-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Page404 */
+.page404 {
+    position: relative;
+    z-index: 5;
+}
+
+.page404::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/404-bg.jpg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 17%;
+    z-index: -1;
+}
+
+.page404::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    background-image: url(../images/404-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 17%;
+    z-index: -1;
+}
+
+
+
 @keyframes shineSweep {
     0% {
         left: -100%;
@@ -560,6 +646,15 @@ menu-link a {
     .pricing-wrap {
         height: 300px;
     }
+
+    .team-content {
+        bottom: -8%;
+    }
+
+    .team-wrapper .team-card:nth-child(2),
+.team-wrapper .team-card:nth-child(5) {
+    transform: translateY(0px);
+}
 }
 
 @media (max-width: 575px) {

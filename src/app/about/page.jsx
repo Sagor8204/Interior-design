@@ -43,7 +43,60 @@ const HistoryData = [
   },
 ];
 
+import Award1 from "@/images/Award-1.jpg";
+import Award2 from "@/images/About-2.jpg";
+import Award3 from "@/images/About-3.jpg";
+import Award4 from "@/images/About-4.jpg";
+import Award5 from "@/images/Award-5.jpg";
+import { useState } from "react";
+import Expertise from "@/UI-Components/Index/Expertise/page";
+import Testimonial from "@/UI-Components/Index/Testimonial/page";
+
+const AwardsData = [
+  {
+    year: "2026",
+    title: "Best Resedentail Desgin",
+    category: "Interior Design",
+    image: Award1,
+  },
+  {
+    year: "2026",
+    title: "Best Resedentail Desgin",
+    category: "Interior Design",
+    image: Award2,
+  },
+  {
+    year: "2026",
+    title: "Best Resedentail Desgin",
+    category: "Interior Design",
+    image: Award3,
+  },
+  {
+    year: "2026",
+    title: "Best Resedentail Desgin",
+    category: "Interior Design",
+    image: Award4,
+  },
+  {
+    year: "2026",
+    title: "Best Resedentail Desgin",
+    category: "Interior Design",
+    image: Award5,
+  },
+];
+
+import partner1 from "@/images/partner1.svg"
+import partner2 from "@/images/partner2.svg"
+import partner3 from "@/images/partner3.svg"
+import partner4 from "@/images/partner4.svg"
+import partner5 from "@/images/partner5.svg"
+import partner6 from "@/images/partner6.svg"
+import Newsletter from "@/UI-Components/Index/Newsletter/page";
+
+const Partners = [partner1, partner2, partner3, partner4, partner5, partner6]
+
 export default function About() {
+  const [hoverIndex, setHoverIndex] = useState(0);
   return (
     <>
       <div className="section-bg text-white flex flex-col">
@@ -118,7 +171,7 @@ export default function About() {
 
       <div className="video w-full pb-10">
         <video
-          src="/images/Video-bg.mp4"
+          src="/videos/Video-bg.mp4"
           autoPlay
           loop
           muted
@@ -199,7 +252,86 @@ export default function About() {
             </h1>
           </div>
         </div>
+
+        <div
+          className="flex flex-col lg:flex-row gap-10 py-15 relative"
+          onMouseMove={(e) => {
+            if (hoverIndex === null) setHoverIndex(0);
+          }}
+          onMouseLeave={() => setHoverIndex(0)}
+        >
+          <div className="w-full lg:w-1/3 relative overflow-hidden rounded-2xl">
+            <div className="relative h-105 w-full">
+              {AwardsData.map((item, index) => (
+                <Image
+                  key={index}
+                  src={item.image}
+                  alt={item.title}
+                  width={500}
+                  height={500}
+                  className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-700 ease-in-out ${
+                    hoverIndex === index ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full lg:w-2/3">
+            {AwardsData.map((item, index) => (
+              <div
+                key={index}
+                onMouseMove={() => setHoverIndex(index)}
+                className="border-b border-gray-300 py-6 flex justify-between items-center cursor-pointer"
+              >
+                <div className="flex items-center gap-5">
+                  <span className="GolosText text-gray-500 text-2xl">
+                    {item.year}
+                  </span>
+                  <h2 className="text-3xl CalSans transition-all duration-300 hover:text-(--prim)">
+                    {item.title}
+                  </h2>
+                </div>
+                <p className="GolosText text-gray-500 hidden md:block">
+                  {item.category}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      <div className="bg-[#EEE]">
+        <Expertise />
+      </div>
+      <div className="pt-0 md:pt-[18%] bg-[#EEE]">
+        <Testimonial />
+      </div>
+
+      {/* <div className="px-[80%] lg:px-[12%] py-30 pb-0">
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={30}
+          loop={true}
+          autoplay={{ delay: 1500 }}
+          modules={[Autoplay]}
+          breakpoints={{
+            1200: { slidesPerView: 5 },
+            991: { slidesPerView: 5 },
+            575: { slidesPerView: 2 },
+            0: { slidesPerView: 2 },
+          }}
+          className="partner-swiper"
+        >
+          {Partners.map((img, index) => (
+            <SwiperSlide key={index}>
+              <Image src={img} alt="PartnerImage" className="partner-img" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div> */}
+
+      <Newsletter />
     </>
   );
 }

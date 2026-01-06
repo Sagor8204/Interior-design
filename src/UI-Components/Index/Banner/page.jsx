@@ -13,8 +13,8 @@ export default function Banner() {
             <span className="text-(--prim)">comprehensive interior design</span>{" "}
             services
           </h1>
-          <Link href="/UI-Componets/Pages/Contact">
-            <button className="rounded-full px-10 py-4 GolosText text-white bg-[#5b6063] transition-all text-4xl duration-300 hover:bg-(--prim)">
+          <Link href="/contact">
+            <button className="rounded-full cursor-pointer px-10 py-4 GolosText text-white bg-[#5b6063] transition-all text-4xl duration-300 hover:bg-(--prim)">
                 Get A Quote
             </button>
           </Link>
