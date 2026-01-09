@@ -308,7 +308,7 @@ export default function About() {
         <Testimonial />
       </div>
 
-      {/* <div className="px-[80%] lg:px-[12%] py-30 pb-0">
+      <div className="px-[80%] lg:px-[12%] py-30 pb-0">
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
@@ -329,7 +329,7 @@ export default function About() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div> */}
+      </div>
 
       <Newsletter />
     </>
