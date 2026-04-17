@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Interior Design - Modern Architecture & Design Website
 
-## Getting Started
+A premium, fully responsive Interior Design and Architecture website built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. This project features smooth animations, modern UI components, and a clean aesthetic tailored for design agencies and architectural firms.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Sliders:** [Swiper.js](https://swiperjs.com/)
+- **Icons:** React Icons, Remixicon, FontAwesome, Iconify, Bootstrap Icons
+- **Utility:** React CountUp, Yet Another React Lightbox
+
+## ✨ Features
+
+- **Modern Homepage:** Includes Hero, About, Expertise, Services, Pricing, Testimonials, and FAQ sections.
+- **Project Showcase:** Detailed project listings with dynamic ID routing.
+- **Blog System:** Fully functional blog section with detailed article pages.
+- **Interactive Gallery:** Image gallery with lightbox support.
+- **Responsive Design:** Optimized for all screen sizes (mobile, tablet, desktop).
+- **Smooth Transitions:** Powered by Framer Motion for a premium user experience.
+- **Custom UI Components:** Reusable components located in `src/UI-Components`.
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/             # Next.js App Router (Pages & Routes)
+├── components/      # Global Layout components (Navbar, Footer)
+├── UI-Components/   # Section-specific UI components
+├── JsonData/        # Static data for Blogs, Projects, and Teams
+└── images/          # Local image assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js (Latest LTS recommended)
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run start`: Starts the production server.
+- `npm run lint`: Runs ESLint for code quality checks.
+
+---
+
+Built with ❤️ for Interior Designers and Architects.
