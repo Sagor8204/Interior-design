@@ -23,37 +23,37 @@ export default function Footer() {
           <div className="footer-content py-3">
             <ul className="footer-links flex flex-col">
               <Link
-                href="/Ui/Pages/about"
+                href="/about"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 About Us
               </Link>
               <Link
-                href="/Ui/Pages/about"
+                href="/services"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 Services
               </Link>
               <Link
-                href="/Ui/Pages/about"
+                href="/gallery"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 Gallery
               </Link>
               <Link
-                href="/Ui/Pages/about"
+                href="/teams"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 Our Team
               </Link>
               <Link
-                href="/Ui/about"
+                href="/blogs"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 Blog
               </Link>
               <Link
-                href="/Ui/Pages/about"
+                href="/contact"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 Contact Us
@@ -64,7 +64,7 @@ export default function Footer() {
           <div className="footer-content py-3">
             <ul className="footer-links flex flex-col">
               <Link
-                href="/Ui/Projects"
+                href="/projects"
                 className="text-gray-300 GolosText mb-1 text-xl transition-all duration-300 hover:text-(--prim) hover:ml-2"
               >
                 Our Projects
@@ -128,8 +128,8 @@ export default function Footer() {
 
         <div className="footer-bottom flex justify-center items-center py-8 border-t border-gray-500">
           <p className="text-gray-300 text-lg">
-            © Copyright 2025. All Rights Reserved By
-            <Link href="https://uicode.in/" className="transition-all font-semibold duration-300 text-white text-xl hover:text-(--prim)"> uicode</Link>
+            © Copyright 2025. All Rights Reserved By Developer
+            {/* <Link href="https://uicode.in/" className="transition-all font-semibold duration-300 text-white text-xl hover:text-(--prim)"> uicode</Link> */}
           </p>
         </div>
       </div>

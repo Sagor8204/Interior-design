@@ -11,7 +11,7 @@ const navlinks = [
     href: "#",
     dropdown: [
       { label: "Projects", href: "/projects" },
-      { label: "Project Details", href: "//projects/1" },
+      { label: "Project Details", href: "/projects/1" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const navlinks = [
       { label: "Page 404", href: "/page404" },
     ],
   },
-  { label: "Contact Us", href: "//UI-Components/Pages/Contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -62,7 +62,7 @@ export default function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between px-[8%] lg:px-[12%] py-5">
-        <div className="flex items-center gap-5">
+        <div>
           {/* Logo */}
           <Link
             href="/"
@@ -70,7 +70,9 @@ export default function Navbar() {
           >
             Oli<span className="text-(--prim)">vion</span>
           </Link>
+        </div>
 
+        <div>
           {/* Dekstop Nav */}
           <nav className="hidden lg:flex space-x-6 menu-link relative ms-10">
             {navlinks.map((link) =>
@@ -110,15 +112,15 @@ export default function Navbar() {
 
         {/* Right Section0 */}
         <div className="flex items-center gap-4">
-          <button className="hidden lg:flex items-center gap-1">
+          {/* <button className="hidden lg:flex items-center gap-1">
             <i className="bi bi-telephone-inbound text-2xl px-3 py-3 rounded-full"></i>
             <div className="flex flex-col items-start">
               <p>Call Us Now</p>
               <h3 className="text-(--prim) GolosText">+91 (123) 456 789</h3>
             </div>
-          </button>
-          <Link href="/UI-Components/Pages/Contact">
-            <button className="bg-(--prim) text-white font-medium px-6 py-3 rounded-full hover:bg-white hover:text-(--black) border border-transparent hover:border-gray-400 cursor-pointer transition-all duration-300">
+          </button> */}
+          <Link href="/contact">
+            <button className="bg-(--prim) text-white font-medium px-4 py-3 rounded-full hover:bg-white hover:text-(--black) border border-transparent hover:border-gray-400 cursor-pointer transition-all duration-300">
               Get a Quote!
             </button>
           </Link>
